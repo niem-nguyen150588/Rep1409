@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.9 on darwin)" generated="20230827 17:08:31.342" rpa="false" schemaversion="3">
+<suite id="s1" name="OpenApp" source="/Users/mac/Documents/MyDocuments/Study/Automation Testing Project/Android Project/TestSuite/OpenApp.robot">
+<test id="s1-t1" name="Dang Nhap Zalo" line="39">
+<kw name="Open_app">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=8.0.0</arg>
+<arg>deviceName=5210fd12ea05c30f</arg>
+<arg>appPackage=com.zing.zalo</arg>
+<arg>appActivity=com.zing.zalo.ui.ZaloLauncherActivity</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230827 17:08:31.489" endtime="20230827 17:08:44.098"/>
+</kw>
+<status status="PASS" starttime="20230827 17:08:31.488" endtime="20230827 17:08:44.099"/>
+</kw>
+<kw name="Click_DangNhap_Button">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Dang Nhap}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230827 17:08:44.101" level="INFO">Clicking element 'id=btnLogin'.</msg>
+<msg timestamp="20230827 17:08:44.714" level="INFO">criteria is btnLogin</msg>
+<status status="PASS" starttime="20230827 17:08:44.100" endtime="20230827 17:08:44.715"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230827 17:08:45.715" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230827 17:08:44.715" endtime="20230827 17:08:45.716"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Wait Allow popup displays}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230827 17:08:46.584" level="INFO">xpath criteria: //*[@resource-id="com.android.packageinstaller:id/permission_allow_button"]</msg>
+<status status="PASS" starttime="20230827 17:08:45.716" endtime="20230827 17:08:46.585"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>ALLOW</arg>
+<doc>Click text identified by ``text``.</doc>
+<msg timestamp="20230827 17:08:46.743" level="INFO">xpath criteria: //*[contains(@text,"ALLOW")]</msg>
+<status status="PASS" starttime="20230827 17:08:46.585" endtime="20230827 17:08:46.744"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Wait Phone Field displays}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230827 17:08:46.972" level="INFO">xpath criteria: //*[@resource-id="com.zing.zalo:id/edtAccount"]</msg>
+<status status="PASS" starttime="20230827 17:08:46.744" endtime="20230827 17:08:46.973"/>
+</kw>
+<status status="PASS" starttime="20230827 17:08:44.099" endtime="20230827 17:08:46.973"/>
+</kw>
+<kw name="Input_sdt">
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${So Dien Thoai}</arg>
+<arg>0702821619</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230827 17:08:46.976" level="INFO">Typing text '0702821619' into text field 'id=edtAccount'</msg>
+<msg timestamp="20230827 17:08:48.040" level="INFO">criteria is edtAccount</msg>
+<status status="PASS" starttime="20230827 17:08:46.974" endtime="20230827 17:08:48.041"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>//*[@resource-id="com.zing.zalo:id/edtPass"]</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230827 17:08:48.169" level="INFO">xpath criteria: //*[@resource-id="com.zing.zalo:id/edtPass"]</msg>
+<status status="PASS" starttime="20230827 17:08:48.041" endtime="20230827 17:08:48.170"/>
+</kw>
+<status status="PASS" starttime="20230827 17:08:46.973" endtime="20230827 17:08:48.170"/>
+</kw>
+<kw name="Input_Pass">
+<kw name="Input Password" library="AppiumLibrary">
+<arg>${Mat Khau}</arg>
+<arg>1234@Tps</arg>
+<doc>Types the given password into text field identified by `locator`.</doc>
+<msg timestamp="20230827 17:08:48.174" level="INFO">Typing password into text field 'id=edtPass'</msg>
+<msg timestamp="20230827 17:08:48.299" level="INFO">criteria is edtPass</msg>
+<status status="PASS" starttime="20230827 17:08:48.171" endtime="20230827 17:08:48.300"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>//*[@resource-id="com.zing.zalo:id/btnLogin"]</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230827 17:08:48.406" level="INFO">xpath criteria: //*[@resource-id="com.zing.zalo:id/btnLogin"]</msg>
+<status status="PASS" starttime="20230827 17:08:48.300" endtime="20230827 17:08:48.407"/>
+</kw>
+<status status="PASS" starttime="20230827 17:08:48.171" endtime="20230827 17:08:48.407"/>
+</kw>
+<kw name="Click_DNnnnn">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Nhan Dang Nhap}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230827 17:08:48.411" level="INFO">Clicking element 'id=btnLogin'.</msg>
+<msg timestamp="20230827 17:08:48.486" level="INFO">criteria is btnLogin</msg>
+<status status="PASS" starttime="20230827 17:08:48.408" endtime="20230827 17:08:48.486"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230827 17:08:50.488" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230827 17:08:48.487" endtime="20230827 17:08:50.489"/>
+</kw>
+<status status="PASS" starttime="20230827 17:08:48.408" endtime="20230827 17:08:50.489"/>
+</kw>
+<status status="PASS" starttime="20230827 17:08:31.488" endtime="20230827 17:08:50.490"/>
+</test>
+<status status="PASS" starttime="20230827 17:08:31.348" endtime="20230827 17:08:50.492"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="OpenApp">OpenApp</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
