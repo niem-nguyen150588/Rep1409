@@ -38,7 +38,6 @@ Click_DNnnnn
     Click Element    ${Nhan Dang Nhap}
     Sleep    2s
 
-
 *** Test Cases ***
 Dang Nhap Zalo
     Open_app
